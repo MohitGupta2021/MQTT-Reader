@@ -33,6 +33,13 @@ docker-compose run --rm mqtt-sub
 To subscribe to data using the Python application, run:
 docker-compose run --rm python-subscriber
 
+###8. Install Mosquitto Clients
+If you are on a Debian-based system (like Ubuntu), you can install the mosquitto-clients package with the following command:
+
+sudo apt-get update
+sudo apt-get install mosquitto-clients
+
+
 ### Additional Information
 Prerequisites: Ensure Docker and Docker Compose are installed on your system.
 Documentation: For further configuration or troubleshooting, consult the repository's documentation or contact the repository maintainer.
