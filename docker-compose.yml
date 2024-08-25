@@ -1,0 +1,43 @@
+version: '3'
+
+# Define the services that will be managed by Docker Compose
+services:
+  mosquitto: # Define the Mosquitto MQTT broker service
+    image: eclipse-mosquitto:2  # Use version 2 of the Eclipse Mosquitto Docker image
+    ports:
+      - "1883:1883"  # Map MQTT default port 1883 from host to container
+      - "9001:9001"  # Map WebSocket port 9001 from host to container
+    volumes: # Mount the following directories from the host to the container
+      - ./mosquitto/config:/mosquitto/config # mount local config directory to container config directory 
+      - ./mosquitto/data:/mosquitto/data  # mount local data directory to container data directory 
+      - ./mosquitto/log:/mosquitto/log   # mount local log directory to container log directory 
+    networks:  # Specify the network this service will be connected to
+      - mosquitto # Connect the Mosquitto broker to the 'mosquitto' network
+
+  mqtt-pub: # Define the MQTT publisher service
+    image: eclipse-mosquitto:2
+    command: sh -c "sleep 10 && mosquitto_pub -h mosquitto -t /events -m '{“sensor_value”:20.2}' "  # Command to publish a message to the topic /events
+    depends_on:  # Ensure this service starts after the Mosquitto broker is up
+       # Depends on the Mosquitto service
+      - mosquitto
+    networks:
+      - mosquitto
+
+  mqtt-sub: # Define the MQTT subscriber service
+    image: eclipse-mosquitto:2
+    command: sh -c "sleep 10 && mosquitto_sub -h mosquitto -t /events "
+    depends_on:
+      - mosquitto
+    networks:
+      - mosquitto
+
+  python-subscriber: # Define the Python-based MQTT subscriber service
+    build: .  # Build the Docker image for this service from the current directory (using Dockerfile)
+    depends_on:
+      - mosquitto
+    networks:
+      - mosquitto
+
+networks:  # Define the custom networks to be used by the services
+  mosquitto:
+    driver: bridge  # Use the bridge network driver, which is the default Docker network type

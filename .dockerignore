@@ -1,0 +1,4 @@
+# Exclude unnecessary directories and files
+mosquitto/data/
+mosquitto/log/
+mosquitto/config/
