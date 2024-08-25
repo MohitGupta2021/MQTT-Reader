@@ -5905,3 +5905,45 @@
 1724584015: New client connected from 172.18.0.1:40040 as auto-E2AF6F44-F39D-BD15-B1AB-374AF5CE0087 (p2, c1, k60).
 1724584015: Client auto-E2AF6F44-F39D-BD15-B1AB-374AF5CE0087 disconnected.
 1724584806: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1724585574: Client mqtt_reader_client closed its connection.
+1724585637: Client auto-0C13A64D-0994-405D-248D-8C17B167F196 disconnected.
+1724586607: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1724592137: mosquitto version 2.0.18 starting
+1724592137: Config loaded from /mosquitto/config/mosquitto.conf.
+1724592137: Opening ipv4 listen socket on port 1883.
+1724592137: Opening websockets listen socket on port 9001.
+1724592137: mosquitto version 2.0.18 running
+1724592138: New connection from 172.18.0.3:38698 on port 1883.
+1724592138: New client connected from 172.18.0.3:38698 as mqtt_reader_client (p5, c1, k60).
+1724592138: mqtt_reader_client 1 /events
+1724592148: New connection from 172.18.0.4:53244 on port 1883.
+1724592148: New client connected from 172.18.0.4:53244 as auto-43572239-3DBF-CB67-09CF-9BA58518D1AC (p2, c1, k60, u'admin').
+1724592148: auto-43572239-3DBF-CB67-09CF-9BA58518D1AC 0 /events
+1724592148: New connection from 172.18.0.5:55880 on port 1883.
+1724592148: New client connected from 172.18.0.5:55880 as auto-FE3DAA2F-2E6A-E7DC-F5F5-37D8DFF5A46F (p2, c1, k60, u'admin').
+1724592148: Client auto-FE3DAA2F-2E6A-E7DC-F5F5-37D8DFF5A46F disconnected.
+1724592178: Client auto-43572239-3DBF-CB67-09CF-9BA58518D1AC disconnected.
+1724592185: New connection from 172.18.0.5:56684 on port 1883.
+1724592185: New client connected from 172.18.0.5:56684 as auto-8BB77859-746A-DFB9-21AF-9539B2910084 (p2, c1, k60, u'admin').
+1724592185: auto-8BB77859-746A-DFB9-21AF-9539B2910084 0 /events
+1724592188: Client mqtt_reader_client closed its connection.
+1724592188: mosquitto version 2.0.18 terminating
+1724592188: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1724592191: mosquitto version 2.0.18 starting
+1724592191: Config loaded from /mosquitto/config/mosquitto.conf.
+1724592191: Opening ipv4 listen socket on port 1883.
+1724592191: Opening websockets listen socket on port 9001.
+1724592191: mosquitto version 2.0.18 running
+1724592192: New connection from 172.18.0.5:56690 on port 1883.
+1724592192: New client connected from 172.18.0.5:56690 as auto-FC020734-EF3F-425D-C0EF-057D0AAAE683 (p2, c1, k60, u'admin').
+1724592192: auto-FC020734-EF3F-425D-C0EF-057D0AAAE683 0 /events
+1724592202: New connection from 172.18.0.3:32806 on port 1883.
+1724592202: New client connected from 172.18.0.3:32806 as auto-BFB3F52D-2DD2-C793-4038-69D1D624B7F5 (p2, c1, k60, u'admin').
+1724592202: Client auto-BFB3F52D-2DD2-C793-4038-69D1D624B7F5 disconnected.
+1724592257: Client auto-FC020734-EF3F-425D-C0EF-057D0AAAE683 disconnected.
+1724592280: New connection from 172.18.0.3:36032 on port 1883.
+1724592280: New client connected from 172.18.0.3:36032 as mqtt_reader_client (p5, c1, k60).
+1724592280: mqtt_reader_client 1 /events
+1724592294: New connection from 172.18.0.4:45948 on port 1883.
+1724592294: New client connected from 172.18.0.4:45948 as auto-6392B500-580A-2E51-76A8-1F5BDCE40394 (p2, c1, k60, u'admin').
+1724592294: Client auto-6392B500-580A-2E51-76A8-1F5BDCE40394 disconnected.

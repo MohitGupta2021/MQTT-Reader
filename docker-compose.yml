@@ -16,7 +16,7 @@ services:
 
   mqtt-pub: # Define the MQTT publisher service
     image: eclipse-mosquitto:2
-    command: sh -c "sleep 10 && mosquitto_pub -h mosquitto -t /events -m '{“sensor_value”:20.2}' "  # Command to publish a message to the topic /events
+    command: sh -c "sleep 10 && mosquitto_pub -h mosquitto -t /events -m '{“sensor_value”:20.2}'  -u admin -P password "  # Command to publish a message to the topic /events
     depends_on:  # Ensure this service starts after the Mosquitto broker is up
        # Depends on the Mosquitto service
       - mosquitto
@@ -25,7 +25,7 @@ services:
 
   mqtt-sub: # Define the MQTT subscriber service
     image: eclipse-mosquitto:2
-    command: sh -c "sleep 10 && mosquitto_sub -h mosquitto -t /events "
+    command: sh -c "sleep 10 && mosquitto_sub -h mosquitto -t /events  -u admin -P password "
     depends_on:
       - mosquitto
     networks:
