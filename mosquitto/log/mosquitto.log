@@ -5904,3 +5904,4 @@
 1724584015: New connection from 172.18.0.1:40040 on port 1883.
 1724584015: New client connected from 172.18.0.1:40040 as auto-E2AF6F44-F39D-BD15-B1AB-374AF5CE0087 (p2, c1, k60).
 1724584015: Client auto-E2AF6F44-F39D-BD15-B1AB-374AF5CE0087 disconnected.
+1724584806: Saving in-memory database to /mosquitto/data//mosquitto.db.
