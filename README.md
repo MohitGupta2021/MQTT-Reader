@@ -1,6 +1,12 @@
 # MQTT-Reader
 
 Welcome to the **MQTT-Reader** repository! This project demonstrates how to set up and interact with MQTT using a local Mosquitto broker running in Docker. It includes four services within Docker containers: the Mosquitto broker, a data publishing service, a data subscribing service, and a Python application.
+# For Result:
+- [ ] https://github.com/MohitGupta2021/MQTT-Reader/blob/main/outputs.pdf
+
+
+# For Secure MQTT-Reader with complete setup 
+- [ ] https://github.com/MohitGupta2021/MQTT-Reader_Secure/
 
 ## 🚀 Getting Started
 
@@ -32,6 +38,11 @@ docker-compose run --rm mqtt-sub
 ### 7. Subscribing to Data through the Python Application
 To subscribe to data using the Python application, run:
 docker-compose run --rm python-subscriber
+### 8.Running Mosquitto Clients without SSL
+Publish:
+mosquitto_pub -h localhost -p 1883 -t /events  -m "{“sensor_value”:20.2}"  -d
+Subsribe:
+mosquitto_sub -h localhost -p 1883 -t /events -d
 
 ### Additional Information
 Prerequisites: Ensure Docker and Docker Compose are installed on your system.
